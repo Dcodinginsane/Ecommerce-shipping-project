@@ -1,27 +1,26 @@
-# E-Commerce-Shipping
-For full explanation, please read my Medium article, <a href="https://jadangpooiling.medium.com/crisp-dm-methodology-with-python-model-deployment-using-flask-included-classification-case-33b9e184f4e7">CRISP-DM Methodology With Python (Model Deployment Using Flask Included) | Classification Case Study Using KNN Model</a>.
 
-## Problem Statement 🤩
-The e-commerce platform is facing challenges in predicting customer ratings accurately, which can lead to reduced customer satisfaction, lower sales, and negative brand reputation. Despite the availability of customer rating data, the current system lacks the ability to analyze and interpret the data in a meaningful way, resulting in inaccurate predictions. This creates a need for a more sophisticated and accurate machine learning model that can analyze customer rating data to predict customer ratings with high accuracy, leading to improved customer satisfaction, increased sales, and positive brand reputation.
 
-## Objective 🤔
-To achieve an accuracy rate of at least 80% in predicting customer ratings within a year using specific order details. This will help businesses make data-driven decisions about their products, marketing strategies, and customer service.
+## Problem Overview 🤩
+The e-commerce platform is experiencing difficulties in accurately predicting customer ratings, leading to decreased customer satisfaction, reduced sales, and a negative impact on brand reputation. Although customer rating data is available, the current system fails to properly analyze and interpret it, causing imprecise predictions. This highlights the need for a more advanced machine learning model capable of accurately analyzing rating data to predict customer ratings, ultimately enhancing customer satisfaction, boosting sales, and strengthening brand reputation.
 
-## Dataset Source 📅
-The dataset was obtained from the <a href ="https://www.kaggle.com/datasets/prachi13/customer-analytics">E-Commerce Shipping Data</a> from Kaggle. 
+## Goal 🤔
+Achieve an accuracy of at least 80% in predicting customer ratings within a year based on specific order information. This will empower businesses to make informed, data-driven decisions regarding their products, marketing, and customer service.
 
-## Techniques Used 🕵️‍♀️
-To determine whether a customer would give rating 1, we can map the rating 2 to 5 as 0 to represent rating other than 1. It will become a <b>binary classification</b>  instead of a multiclass classification. 
+## Data Source 📅
+The dataset was sourced from the <a href="https://www.kaggle.com/datasets/prachi13/customer-analytics">E-Commerce Shipping Data</a> available on Kaggle.
 
-## Result 🔎
-The final model is a k-Nearest Neighbors (KNN) classifier. The final model returned accuracy score of about 77.60% for the testing data. Besides, I also created a flask application with a proper frontend and UI that can be run on the local computer (as shown in the video below).
+## Methods Used 🕵️‍♀️
+To predict if a customer would give a rating of 1, we remapped ratings 2 to 5 as 0, representing any rating other than 1. This converted the task into a <b>binary classification</b> rather than a multiclass classification problem.
 
+## Outcome 🔎
+The final model used was a k-Nearest Neighbors (KNN) classifier. It achieved an accuracy of approximately 77.60% on the test data. Additionally, a Flask application with a user-friendly interface was developed, which can be executed on a local machine (as shown in the video below).
 
 https://user-images.githubusercontent.com/57357735/230870228-6b66ab5c-1b04-485e-86e8-bd7b81fd34eb.mp4
 
+## Suggestions 📥
+* Experiment with other classification algorithms such as support vector machine, random forest classifier, and logistic regression.
+* Apply Randomized Search or Grid Search to fine-tune hyperparameters and potentially improve accuracy.
+* Address class imbalance issues using techniques like SMOTE, SMOTE-TOMEK, ADASYN, or SMOTE-ENN.
+* Consider developing a multiclass classification model with this dataset, where you wouldn't need to remap ratings 2 to 5 as 0. This would allow the model to predict whether a customer will give a rating of 1, 2, 3, 4, or 5 specifically, rather than just predicting whether they will give a rating of 1 or not.
 
-## Recommendation 📥
-* Use other classification machine learning algorithms, such as support vector machine, random forest classifier, and logistic regression. 
-* Utilize Randomized Search or Grid Search to tune the hyperparameters to check if the accuracy score would be higher.
-* Handle the class imbalance using SMOTE, SMOTE-TOMEK, ADASYN, or SMOTE-ENN techniques.  
-* You may try to build multiclass classification model using this dataset, which means you may not need to map the rating 2 to 5 as 0 before you train the model. For a multiclass multiclass classification model, it will return the result that indicates whether a customer will give rating 1, 2, 3, 4, or 5 specifically, instead of indicating whether a customer will give rating 1 or not.  
+
